@@ -3,3 +3,5 @@ build.bat
 build.sh
 Dockerfile
 Makefile
+fargate/
+docs/

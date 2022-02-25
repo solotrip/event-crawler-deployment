@@ -16,6 +16,15 @@ FIREBASE_AUTH_URI=
 FIREBASE_TOKEN_URI=
 FIREBASE_AUTH_PROVIDER_X509_CERT_URL=
 FIREBASE_CLIENT_X509_CERT_URL=
+S3_ACCESS_KEY_ID=
+S3_SECRET_ACCESS_KEY=
+S3_REGION=eu-central-1
+```
+
+## ULTIMATE Event Updater
+
+```
+docker run --env-file .env ghcr.io/solotrip/event-crawler:latest bash /app/scripts/event-updater.sh
 ```
 
 ## Everfest
@@ -54,5 +63,5 @@ docker run --env-file .env ghcr.io/solotrip/event-crawler:latest bash /app/scrip
 
 ```
 bash build.sh
-docker push ghcr.io/solotrip/event-crawler:latest
+docker push ghcr.io/solotrip/event-crawler:latest 
 ```
