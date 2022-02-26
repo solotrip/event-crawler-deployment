@@ -65,3 +65,11 @@ docker run --env-file .env ghcr.io/solotrip/event-crawler:latest bash /app/scrip
 bash build.sh
 docker push ghcr.io/solotrip/event-crawler:latest 
 ```
+
+
+## Publishing Docker Image to ECR
+
+```
+aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 706840910256.dkr.ecr.eu-central-1.amazonaws.com
+docker push 706840910256.dkr.ecr.eu-central-1.amazonaws.com/pulfy-jobs:latest
+```
