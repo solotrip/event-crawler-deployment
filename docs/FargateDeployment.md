@@ -27,3 +27,20 @@ ecs-cli compose --project-name event-updater --file ./docker-compose.yml --ecs-p
 aws events put-rule --schedule-expression "cron(0 2 ? * 1 *)" --name weekly-event # every monday at 2 am
 aws events put-targets --rule "weekly-event" --targets file://scheduled-task-weekly-events.json
 ```
+
+
+## Creating new task
+
+Create a new directory under `/fargate/tasks` and create a `docker-compose.yml` inside, that contains task definition. Then run these commands to register that task to ECS.
+Do not forget to update the image at ECR if you have changed it.
+
+```shell
+cd fargate/tasks/<task-name>
+ecs-cli compose --project-name <task-name> --file ./docker-compose.yml --ecs-params ../../ecs-params.yml --region eu-central-1 create --launch-type FARGATE
+```
+
+- To schedule the task create `scheduled-task.json` file. You can use `fargate\scheduled-task-weekly-events.json` as an example. You have to change the task definition ARN to newly created one
+```
+aws events put-rule --schedule-expression "cron(30 00 * * ? *)" --name <schedule-name> # every day at 00.30
+aws events put-targets --rule "<schedule-name>" --targets file://scheduled-task.json
+```

@@ -1,0 +1,13 @@
+version: '3'
+services:
+  covid_updater:
+    image: 706840910256.dkr.ecr.eu-central-1.amazonaws.com/pulfy-jobs
+    env_file:
+      - ../../../.env
+    command: 'bash /app/scripts/covid-status.sh'
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: pulfy-jobs
+        awslogs-region: eu-central-1
+        awslogs-stream-prefix: pulfy-jobs

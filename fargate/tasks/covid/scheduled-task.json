@@ -1,0 +1,18 @@
+[{
+  "Id": "1",
+  "Arn": "arn:aws:ecs:eu-central-1:706840910256:cluster/jobs",
+  "RoleArn": "arn:aws:iam::706840910256:role/ecsTaskExecutionRole",
+  "EcsParameters": {
+    "TaskDefinitionArn": "arn:aws:ecs:eu-central-1:706840910256:task-definition/covid-updater",
+    "TaskCount": 1,
+    "LaunchType": "FARGATE",
+    "NetworkConfiguration": {
+      "awsvpcConfiguration": {
+        "Subnets": ["subnet-064bc106178d28887", "subnet-0caca7e5a205404b0"],
+        "SecurityGroups": ["secgroup1"],
+        "AssignPublicIp": "ENABLED"
+      }
+    },
+    "PlatformVersion": "LATEST"
+  }
+}]
