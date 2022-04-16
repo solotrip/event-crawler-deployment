@@ -4,7 +4,7 @@ services:
     image: 706840910256.dkr.ecr.eu-central-1.amazonaws.com/pulfy-jobs:latest
     env_file:
       - ../../../.env
-    command: 'bash /app/scripts/covid-status.sh'
+    command: 'bash /app/scripts/visa.sh'
     logging:
       driver: awslogs
       options:

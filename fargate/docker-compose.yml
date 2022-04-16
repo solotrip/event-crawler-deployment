@@ -1,7 +1,7 @@
 version: '3'
 services:
   event_updater:
-    image: 706840910256.dkr.ecr.eu-central-1.amazonaws.com/pulfy-jobs
+    image: 706840910256.dkr.ecr.eu-central-1.amazonaws.com/pulfy-jobs:latest
     env_file:
       - ../.env
     command: 'bash /app/scripts/event-updater.sh'

@@ -3,7 +3,7 @@
   "Arn": "arn:aws:ecs:eu-central-1:706840910256:cluster/jobs",
   "RoleArn": "arn:aws:iam::706840910256:role/ecsTaskExecutionRole",
   "EcsParameters": {
-    "TaskDefinitionArn": "arn:aws:ecs:eu-central-1:706840910256:task-definition/event-updater",
+    "TaskDefinitionArn": "arn:aws:ecs:eu-central-1:706840910256:task-definition/visa-updater",
     "TaskCount": 1,
     "LaunchType": "FARGATE",
     "NetworkConfiguration": {
