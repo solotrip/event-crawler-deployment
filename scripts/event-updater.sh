@@ -14,7 +14,7 @@ python3 -m solodata.tasks.import_events_with_change_detection
 python3 -m solodata.tasks.import_events_with_change_detection
 
 [[ -z $NO_IMG_UPLOAD ]] && cd /app/scrapotrip && \
-node scrapers/events/imageUploader.js
+node scrapers/events/imageUploader.js  --bucket pulfy-media-private
 [[ -z $NO_SCORE_UPDATE ]] && cd /app/solodata-external-data-proccessor && \
 python3 -m solodata.tasks.calculate_recommendation_event_scores
 

@@ -7,7 +7,7 @@
     "TaskCount": 1,
     "LaunchType": "FARGATE",
     "NetworkConfiguration": {
-      "awsvpcConfiguration": {
+      "AwsvpcConfiguration": {
         "Subnets": ["subnet-064bc106178d28887", "subnet-0caca7e5a205404b0"],
         "SecurityGroups": ["secgroup1"],
         "AssignPublicIp": "ENABLED"
